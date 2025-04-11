@@ -2,13 +2,14 @@ package com.intern_api.controller;
 
 import com.intern_api.model.Mark;
 import com.intern_api.repository.StudentMark;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@SecurityRequirement(name = "basicAuth")
 @RestController
 @RequestMapping("/marks")
 public class MarkController {
